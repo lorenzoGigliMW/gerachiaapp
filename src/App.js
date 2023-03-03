@@ -1,25 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import BottoneBello from './BottoneBello';
+import { Component } from 'react';
+import LabelBella from './LabelBella';
+import axios from 'axios';
+import AppAnimale from './AppAnimale';
+import AppVegetale from './AppVegetale';
 
-function App() {
-  return (
+
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+  }
+
+  render = () => (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppAnimale />
+      <AppVegetale />
     </div>
   );
 }
-
-export default App;
